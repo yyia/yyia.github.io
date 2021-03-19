@@ -1,6 +1,14 @@
-var hydra = new Hydra({
-  canvas: document.getElementById('myCanvas'),
-  detectAudio: false
+let isIOS =
+  (/iPad|iPhone|iPod/.test(navigator.platform) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) &&
+  !window.MSStream;
+let precisionValue = isIOS ? 'highp' : 'mediump';
+let hydra = new Hydra({
+    canvas: canvas,
+    enableStreamCapture: false,
+    detectAudio: false,
+    // etc
+    precision: precisionValue
 });
 
 DD = 0.01;

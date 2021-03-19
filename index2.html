@@ -46,20 +46,23 @@
 </head>
 
 <body class='collect_blog_7 section-4 exhibit-7 format-blog'>
-<script>
-       let isIOS =
-  (/iPad|iPhone|iPod/.test(navigator.platform) ||
-    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) &&
-  !window.MSStream;
-let precisionValue = isIOS ? 'highp' : 'mediump';
-let hydra = new Hydra({
-    canvas: canvas,
-    enableStreamCapture: false,
-    detectAudio: false,
-    // etc
-    precision: precisionValue
-});
-    </script>
+    
+<!-- <script>
+        var is_iphone = [
+            'iPad Simulator',
+            'iPhone Simulator',
+            'iPod Simulator',
+            'iPad',
+            'iPhone',
+            'iPod'
+        ].includes(navigator.platform)
+            // iPad on iOS 13 detection
+            || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+        console.log(is_iphone)
+        if (is_iphone) {
+            alert("This website's animations might not work on iPhones or iPads. Please switch to Desktop.")
+        }
+    </script> -->
 
     <div id='contenu'>
         <script src="script.js"></script>
