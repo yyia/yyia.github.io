@@ -1,0 +1,761 @@
+/**
+* CSS
+*
+* @version 2.0
+* @author Vaska
+*
+* There are also some obscure rules in base.css
+*/
+
+/* scroll bar */
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: black;
+}
+/* Side Menu */
+#sidebar-wrapper {
+  position: fixed;
+  z-index: 2;
+  top: 0px !important;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  transform: translateX(300px);
+  background: #0000003b;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: 'FoundersGrotesk-Light' !important;
+}
+.sidebar-nav {
+  position: absolute;
+  font-family: 'FoundersGrotesk-Light' !important;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+  list-style: none;
+}
+.sidebar-nav li.sidebar-nav-item a {
+  font-size: 1.2rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0);
+  height: 100px;
+  line-height: 70px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+}
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #000;
+  background: rgba(255, 255, 255, 0);
+}
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+.sidebar-nav > .sidebar-brand {
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0);
+  height: 200px;
+  line-height: 20px;
+  padding-top: 125px;
+  padding-bottom: 105px;
+  padding-left: 20px;
+}
+.sidebar-nav > .sidebar-brand a {
+  color: #fff;
+}
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+#sidebar-wrapper.active {
+  left: -300px;
+  width: 300px;
+  -webkit-transition: all 1s ease 0s;
+  -moz-transition: all 1s ease 0s;
+  -ms-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+.menu-toggle {
+  position: fixed;
+  left: 25px;
+  top: 25px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  background: #d7675d80;
+  line-height: 55px;
+  z-index: 999;
+}
+.menu-toggle:focus,
+.menu-toggle:hover {
+  color: #fff;
+}
+.menu-toggle:hover {
+  background: #d7675d;
+}
+.service-icon {
+  background-color: #fff;
+  color: #fff;
+  height: 7rem;
+  width: 7rem;
+  display: block;
+  line-height: 7.5rem;
+  font-size: 2.25rem;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+.callout {
+  padding: 15rem 0;
+  background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    url('../img/about.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about {
+  padding: 15rem 0;
+  background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    url('../img/about.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.callout h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  display: block;
+  max-width: 30rem;
+}
+.portfolio-item {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  min-width: 555px;
+  box-sizing: 10px;
+  margin: auto auto 0rem;
+}
+.mb-1,
+.my-0 {
+  margin-bottom: -500px !important;
+  margin-left: -47px;
+}
+.portfolio-item .caption {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.portfolio-item .caption .caption-content {
+  color: #ffffffb3;
+  margin: auto 2rem 2rem;
+}
+.portfolio-item .caption .caption-content h2 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+.portfolio-item .caption .caption-content p {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+/*-*/
+body,
+html {
+  font-size: 14px !important;
+  font-family: 'FoundersGrotesk-Light';
+  margin: 0px;
+  background-color: #e4e1e1;
+}
+
+button {
+  display: inline-block;
+  font-size: 16px;
+  padding: 15px;
+  margin: 12px;
+  border-width: 0px !important;
+  background-color: #ffffff00;
+}
+
+button-modal {
+  display: inline-block;
+  font-size: 16px;
+  padding-left: 85%;
+  margin: 12px;
+  border-width: 0px !important;
+  background-color: #ffffff00;
+}
+
+button-next {
+  display: inline-block;
+  font-size: 14px;
+  min-width: 200px !important;
+  margin-left: 388px !important;
+  margin-top: -20px !important;
+  margin: 55px;
+  background-color: #ffffff00;
+}
+
+button-previous {
+  display: inline-block;
+  font-size: 14px;
+  min-width: 179px !important;
+  margin-left: 0px !important;
+  margin-top: 0;
+  padding-top: 16px;
+  margin: 0px;
+  z-index: 2;
+  background-color: #ffffff00;
+}
+
+code {
+  background-color: #00000063;
+  font-family: InputMono-Regular;
+  src: url('InputMono-Regular.ttf');
+  font-size: 11px;
+  letter-spacing: 0.7px;
+  border: solid white 0px;
+  color: #fff;
+  text-align: right;
+}
+canvas {
+  overflow-y: hidden;
+  position: fixed;
+  background-size: cover;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#main {
+  position: absolute;
+  top: -200px;
+  left: 0px;
+  z-index: 1;
+  max-width: 175px !important;
+  margin-left: 50%;
+  text-align: right;
+}
+.spacer {
+  /* width: 512px; */
+  height: 512px;
+  position: relative;
+}
+.spacer-small {
+  height: 233px;
+  position: relative;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px !important;
+  font-family: 'FoundersGrotesk-Light';
+}
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 19px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f200;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* The dots/bullets/indicators */
+.active {
+  background-color: #717171;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+}
+@font-face {
+  font-family: 'FoundersGrotesk-Light';
+  src: url('../FoundersGrotesk-Light.otf');
+}
+body {
+  font-size: 14px !important;
+  font-family: 'FoundersGrotesk-Light';
+  /* color: #eaac8b; */
+  line-height: 1.4em;
+  /* text-align: justify; */
+  /* font-weight: 300; */
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #00000000;
+  color: white;
+  text-align: left;
+  margin-left: 56px;
+  margin-bottom: 45px;
+  z-index: 4;
+}
+* {
+  box-sizing: border-box;
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+#contenu {
+  position: relative;
+  z-index: 5;
+}
+hr {
+  min-width: 650px !important;
+  margin: 0px;
+}
+sub {
+  background-color: #fff;
+}
+/* link scheme */
+/* you can customize links further down the page too */
+a:link {
+  text-decoration: none;
+  color: #000 !important;
+}
+a:visited {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  text-decoration: none;
+  color: #fff;
+}
+a img {
+  border: none;
+}
+audio:focus {
+  outline: none;
+}
+/* general styles */
+small {
+  font-size: 9px;
+}
+code {
+  font-family: monospace;
+}
+blockquote {
+  padding-left: 9px;
+}
+/* headings */
+h1 {
+  font-family: 'Belleza', sans-serif !important;
+  font-size: 22px !important;
+  text-align: left !important;
+  line-height: 10px !important;
+  letter-spacing: 0.5px !important;
+  margin-top: 10px !important;
+  margin-bottom: -5px !important;
+  margin-left: 0px !important;
+  width: 500px !important;
+}
+
+h2 {
+  font-size: 14px;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+h5 {
+  font-family: 'Belleza', sans-serif !important;
+  font-size: 14px;
+  /* text-align: right; */
+  line-height: 1.25;
+  width: 200px;
+  margin-top: 3em;
+  margin-bottom: 2em;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 16px;
+  margin-bottom: 1em;
+}
+/* paragraph width */
+#index p {
+  margin-bottom: 1em;
+}
+#exhibit p,
+code,
+blockquote {
+  color: #ffffffdb;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Red Hat Text', sans-serif;
+  width: 650px;
+  margin-bottom: 1em; /* line-height: 1.3em; */
+  text-align: left;
+}
+#exhibit1 p,
+code {
+  color: #000;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Red Hat Text', sans-serif;
+  width: 500px;
+  margin-bottom: 1em;
+  /* line-height: 1.3em; */
+  text-align: left;
+}
+#exhibit1 blockquote {
+  color: #000;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Red Hat Text', sans-serif;
+  width: 450px !important;
+  margin-bottom: 1em;
+  /* line-height: 1.3em; */
+  text-align: left;
+}
+
+#exhibit1 blockquote1 {
+  color: #000;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Red Hat Text', sans-serif;
+  width: 450px !important;
+  margin-bottom: 1em;
+  /* line-height: 1.3em; */
+  text-align: left;
+}
+
+#exhibit1 blockquote p {
+  color: #000;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Red Hat Text', sans-serif;
+  width: 440px !important;
+  margin-bottom: 1em;
+  /* line-height: 1.3em; */
+  text-align: left;
+}
+
+#exhibit2 p,
+code,
+blockquote {
+  color: #000;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Red Hat Text', sans-serif;
+  width: 569px;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  margin-top: 0px;
+  /* line-height: 1.3em; */
+  text-align: left;
+  padding-right: 30px;
+}
+
+/*voy tirando por el parque lafontaine, esto se vive sin pain*/
+
+#exhibit h3,
+code,
+blockquote {
+  font-family: 'FoundersGrotesk-Light';
+  font-weight: 900 !important;
+  font-size: 23px;
+  line-height: 0.65;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  margin-bottom: -5px;
+  text-transform: uppercase;
+  margin-left: 0px;
+}
+#exhibit h1,
+code,
+blockquote {
+  font-family: 'Belleza', sans-serif;
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+  margin-bottom: -5px;
+  margin-left: 0px;
+  width: 500px;
+}
+#exhibit1 h3,
+code,
+blockquote {
+  font-family: 'Belleza', sans-serif;
+  font-size: 18px;
+  text-align: left;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+  margin-bottom: -5px;
+  margin-left: 0px;
+  width: 500px;
+}
+#exhibit h4,
+code,
+blockquote {
+  font-family: 'Red Hat Text', sans-serif;
+  font-size: 16px;
+  line-height: 100px;
+  color: #fff;
+  letter-spacing: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  border-top: 0.5px solid #f4f3f1;
+  border-bottom: 0.5px solid #f4f3f1;
+}
+#exhibit1 h1,
+code,
+blockquote {
+  font-family: 'Belleza', sans-serif;
+  font-size: 22px;
+  text-align: left;
+  line-height: 10px;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+  margin-bottom: -5px;
+  margin-left: 0px;
+  width: 500px;
+} /* highlighter style - maybe you want to change colors? */
+.highlight {
+  background: #ccff00;
+  color: #000;
+}
+/* never adjust the margin or padding here unless you seriously know what you are doing */
+/* think #index .container and #exhibit .container for only padding adjustments */
+#index {
+  width: 250px;
+  background: #eb5f4900; /* line-height: 1.3em; */
+}
+#exhibit {
+  margin: 20px 0 0 33%;
+}
+#exhibit4 {
+  margin-top: 30px;
+  display: flex;
+  width: 90vw !important;
+  flex-direction: row;
+  justify-content: center;
+}
+#exhibit1 {
+  margin-top: 30px;
+}
+/* styling the index */
+#index ul {
+  list-style: none;
+  margin: 0;
+}
+#index ul.section {
+  margin-bottom: 1em;
+}
+#index ul.subsection {
+}
+/* the follow rules for index are not required */
+/* they are mostly for complex customization */
+/* for tag display */
+#index ul#all_tags {
+  list-style-type: none;
+  margin-bottom: 1em;
+}
+#index ul#all_tags li {
+  display: inline;
+  margin-right: 3px;
+}
+#index ul#all_tags li a {
+}
+/* styles for the section titles */
+#index ul.section span.section_title,
+#index ul.section span.section_title a {
+  color: black;
+}
+/* active section title */
+#index span.active_section_title,
+#index span.active_section_title a {
+  font-weight: bold;
+}
+/* active exhibit title parts */
+/* color of active exhibit title link and font-weight */
+
+/* additional #index options */
+#index ul li .password a {
+  /* background: url(../img/locked.gif) right center no-repeat; padding-right: 18px; */
+}
+/* the "new" indicator */
+#index ul li sup.new_exhibit {
+  color: #0c0;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 8px;
+  vertical-align: top;
+}
+#index ul li sup.new_exhibit:before {
+  color: #0c0;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 8px;
+  vertical-align: top;
+  content: 'New';
+}
+/* end styling for index */
+/* links styles only for the #index region */
+#index a:link {
+  text-decoration: none;
+  color: #000 !important;
+}
+#index a:visited {
+  color: #000 !important;
+}
+#index a:hover {
+  color: #ffffffbf !important;
+}
+/* links styles only for the #exhibit region */
+#exhibit a:link {
+  text-decoration: none;
+}
+#exhibit a:visited {
+  color: #000 !important;
+}
+#exhibit a:hover {
+  text-decoration: none;
+}
+/* links styles only for the #exhibit region */
+#exhibit1 a:link {
+  text-decoration: none;
+}
+#exhibit1 a:visited {
+  color: #000 !important;
+}
+#exhibit1 a:hover {
+  text-decoration: none;
+}
+/* links styles just for h1 title of site (your name/logo) */
+#index h1 a {
+  font-weight: normal;
+  text-decoration: none;
+  color: #000;
+}
+/* this is where you adjust your paddings for #index and #exhibit together */
+.container {
+  padding: 53px 420px 25px 27px;
+  max-width: 600px !important;
+}
+.container2 {
+  padding: 0px 10px 5px 0px;
+  padding-left: 80px;
+  max-width: 1000px !important;
+}
+.container4 {
+  padding: 0px 10px 5px 0px;
+}
+.container6 {
+  padding: 53px 420px 25px 27px;
+  max-width: 600px !important;
+  position: relative;
+}
+/* this is where you pad them separately */
+#index .container {
+  width: 650px !important;
+}
+/* size and style of titles and captions (not mobile though) */
+.captioning {
+  margin-top: 2px;
+}
+.title {
+  font-size: 0.7em;
+  font-style: italic;
+  line-height: 1.2em;
+}
+.caption {
+  font-size: 0.7em;
+  font-style: italic;
+  line-height: 1.2em;
+}
