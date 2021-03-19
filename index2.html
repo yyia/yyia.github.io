@@ -56,12 +56,12 @@
             'iPod'
         ].includes(navigator.platform)
             // iPad on iOS 13 detection
-            && !(navigator.userAgent.includes("Mac"))
+            || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
         console.log(is_iphone)
         if (is_iphone) {
             alert("This website's animations might not work on iPhones or iPads. Please switch to Desktop.")
         }
-</script>
+    </script>
 
     <div id='contenu'>
         <script src="script.js"></script>
