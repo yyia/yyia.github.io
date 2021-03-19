@@ -3,13 +3,11 @@ let isIOS =
     (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) &&
   !window.MSStream;
 let precisionValue = isIOS ? 'highp' : 'mediump';
-let hydra = new Hydra({
-    canvas: canvas,
-    enableStreamCapture: false,
-    detectAudio: false,
-    // etc
-    precision: precisionValue
+var hydra = new Hydra({
+  canvas: document.getElementById('myCanvas'),
+  detectAudio: false
 });
+
 
 DD = 0.01;
 b = (o, u, i, y, z) =>
