@@ -46,14 +46,22 @@
 </head>
 
 <body class='collect_blog_7 section-4 exhibit-7 format-blog'>
-    <!-- <script>
-        var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-        console.log(is_safari)
-        if (is_safari) {
-            alert("This website's animations might not work on Safari. Please switch to Chrome, Opera or Firefox.")
+<script>
+        var is_iphone = [
+            'iPad Simulator',
+            'iPhone Simulator',
+            'iPod Simulator',
+            'iPad',
+            'iPhone',
+            'iPod'
+        ].includes(navigator.platform)
+            // iPad on iOS 13 detection
+            && !(navigator.userAgent.includes("Mac"))
+        console.log(is_iphone)
+        if (is_iphone) {
+            alert("This website's animations might not work on iPhones or iPads. Please switch to Desktop.")
         }
-    </script>
- -->
+</script>
 
     <div id='contenu'>
         <script src="script.js"></script>
